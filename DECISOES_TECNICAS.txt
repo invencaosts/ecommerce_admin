@@ -1,0 +1,44 @@
+DECISÕES TÉCNICAS
+
+Framework: React 19 + TypeScript + Vite
+---
+Usei React 19 por ser a versão estável atual e TypeScript para ter tipagem estática,
+o que ajuda a pegar erros antes de rodar o código. O Vite foi escolhido no lugar do
+Create Next App por ser mais rápido e ter integração nativa com o Vitest.
+
+
+Estrutura de pastas: feature-based
+---
+O código relacionado a produtos fica concentrado em src/features/products. Componentes
+genéricos e reutilizáveis ficam em src/components. Preferi essa separação para que
+tudo que envolve o domínio de produto esteja no mesmo lugar, sem precisar procurar
+em pastas espalhadas.
+
+
+Gerenciamento de estado: Zustand
+---
+Escolhi Zustand no lugar do Redux Toolkit porque o projeto não tem a complexidade que
+justificaria reducers, actions creators e slices separados. Com Zustand, o estado e as
+ações ficam no mesmo arquivo e o store é acessível em qualquer componente sem precisar
+de Provider.
+
+
+Formulários: React Hook Form + Zod
+---
+O React Hook Form controla os inputs sem causar re-render a cada tecla digitada. O Zod
+define as regras de validação e ao mesmo tempo gera os tipos TypeScript, então não
+preciso manter uma interface e uma validação separadas para os mesmos campos.
+
+
+Testes unitários: Vitest
+---
+Usei Vitest porque ele reutiliza a configuração do Vite sem nenhum setup extra. Os
+testes cobrem três pontos da regra de negócio: a função de filtro, o schema de
+validação do formulário e as actions do store Zustand.
+
+
+Por que não fiz testes e2e
+---
+Não tenho familiaridade suficiente com Playwright ou Cypress para entregar uma
+configuração bem feita dentro do prazo. Preferi não incluir do que entregar algo
+mal estruturado.

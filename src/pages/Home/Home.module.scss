@@ -1,0 +1,186 @@
+@use '@/styles/variables' as *;
+@use '@/styles/breakpoints' as *;
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2xl;
+  padding: $spacing-xl 0;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $color-primary;
+}
+
+.eyebrowDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $color-primary;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: $color-gray-900;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+
+  @include mobile {
+    font-size: 1.5rem;
+  }
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: $color-gray-600;
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding-top: $spacing-sm;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: 11px $spacing-lg;
+  background: $color-primary;
+  color: $color-white;
+  border-radius: $border-radius;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.15s;
+
+  &:hover {
+    background: $color-primary-dark;
+    color: $color-white;
+  }
+
+  @include mobile {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.ctaArrow {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-md;
+
+  @include mobile {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.statCard {
+  background: $color-white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-lg;
+  padding: $spacing-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: $color-gray-400;
+}
+
+.statValue {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: $color-gray-900;
+  line-height: 1;
+  letter-spacing: -0.5px;
+
+  &.statValueActive {
+    color: $color-primary;
+  }
+
+  &.statValueInactive {
+    color: $color-gray-400;
+  }
+}
+
+.statDescription {
+  font-size: 0.8rem;
+  color: $color-gray-600;
+  margin-top: 2px;
+}
+
+.quickSection {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.sectionTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: $color-gray-400;
+}
+
+.quickLinks {
+  display: flex;
+  gap: $spacing-sm;
+  flex-wrap: wrap;
+}
+
+.quickLink {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-sm $spacing-md;
+  background: $color-white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  color: $color-gray-900;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+
+  &:hover {
+    border-color: $color-primary;
+    color: $color-primary;
+  }
+}

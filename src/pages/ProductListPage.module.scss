@@ -1,0 +1,143 @@
+@use '@/styles/variables' as *;
+@use '@/styles/breakpoints' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+
+  @include mobile {
+    gap: $spacing-md;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-md;
+
+  @include mobile {
+    flex-wrap: wrap;
+
+    >div {
+      flex: 1;
+    }
+  }
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: $color-gray-900;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+
+  @include mobile {
+    font-size: 1.25rem;
+  }
+}
+
+.count {
+  font-size: 0.8rem;
+  color: $color-gray-400;
+  font-weight: 500;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.filterBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  height: 38px;
+  padding: 0 $spacing-md;
+  background: $color-white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  color: $color-gray-600;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.15s, color 0.15s, background-color 0.15s;
+
+  svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    border-color: $color-primary;
+    color: $color-primary;
+  }
+
+  &.filterBtnActive {
+    background: $color-primary-light;
+    border-color: $color-primary;
+    color: $color-primary;
+  }
+}
+
+.filterDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $color-primary;
+  flex-shrink: 0;
+}
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-md;
+  padding: $spacing-md $spacing-lg;
+  background: #FEF2F2;
+  color: #B91C1C;
+  border-radius: $border-radius;
+  font-size: 0.875rem;
+  border-left: 3px solid #DC2626;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-sm;
+  }
+}
+
+.retryBtn {
+  background: none;
+  border: 1px solid #B91C1C;
+  border-radius: $border-radius;
+  color: #B91C1C;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: $spacing-xs $spacing-md;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.15s, color 0.15s;
+
+  @include mobile {
+    width: 100%;
+    text-align: center;
+  }
+
+  &:hover {
+    background: #B91C1C;
+    color: $color-white;
+  }
+}

@@ -1,0 +1,22 @@
+@use '@/styles/variables' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-md;
+  padding: $spacing-2xl 0;
+  text-align: center;
+
+  h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    color: $color-gray-200;
+  }
+
+  p {
+    color: $color-gray-600;
+    font-size: 1.125rem;
+  }
+}

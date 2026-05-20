@@ -1,0 +1,85 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Smartphone Galaxy X12",
+      "description": "Smartphone com tela AMOLED de 6,7\", câmera tripla de 108 MP, bateria de 5000 mAh e carregamento rápido de 65W. Processador octa-core e 12 GB de RAM.",
+      "price": 2799.90,
+      "category": "Eletrônicos",
+      "status": "active",
+      "imageUrl": "https://placehold.co/400x300/2563eb/white?text=Smartphone",
+      "createdAt": "2024-01-10T08:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "name": "Notebook UltraSlim 15",
+      "description": "Notebook com processador Intel Core i7, 16 GB RAM, SSD 512 GB, tela Full HD de 15,6\" e até 12 horas de bateria.",
+      "price": 4599.00,
+      "category": "Eletrônicos",
+      "status": "active",
+      "imageUrl": "https://placehold.co/400x300/2563eb/white?text=Notebook",
+      "createdAt": "2024-01-15T09:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "name": "Fone de Ouvido Bluetooth Pro",
+      "description": "Fone over-ear com cancelamento ativo de ruído, driver de 40 mm, autonomia de 30 horas e conexão multipoint para dois dispositivos simultaneamente.",
+      "price": 389.90,
+      "category": "Eletrônicos",
+      "status": "inactive",
+      "imageUrl": "https://placehold.co/400x300/2563eb/white?text=Fone+BT",
+      "createdAt": "2024-02-05T11:30:00.000Z"
+    },
+    {
+      "id": "4",
+      "name": "Jaqueta Corta-Vento Unissex",
+      "description": "Jaqueta leve e impermeável, ideal para atividades ao ar livre. Disponível em tamanhos P ao GG. Tecido respirável e costuras termossoldadas.",
+      "price": 189.90,
+      "category": "Vestuário",
+      "status": "active",
+      "imageUrl": "https://placehold.co/400x300/16a34a/white?text=Jaqueta",
+      "createdAt": "2024-02-20T14:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "name": "Tênis Running Boost 360",
+      "description": "Tênis esportivo com solado de borracha de alta tração, palmilha em EVA moldada e cabedal em mesh respirável. Perfeito para corridas de longa distância.",
+      "price": 349.90,
+      "category": "Vestuário",
+      "status": "active",
+      "imageUrl": "https://placehold.co/400x300/16a34a/white?text=Tenis",
+      "createdAt": "2024-03-05T10:15:00.000Z"
+    },
+    {
+      "id": "6",
+      "name": "Café Especial Origem Única 500g",
+      "description": "Café 100% arábica, torra média, com notas de chocolate amargo e frutas vermelhas. Grãos selecionados de fazendas certificadas do Sul de Minas.",
+      "price": 42.90,
+      "category": "Alimentos",
+      "status": "active",
+      "imageUrl": "https://placehold.co/400x300/ca8a04/white?text=Cafe",
+      "createdAt": "2024-03-12T08:00:00.000Z"
+    },
+    {
+      "id": "7",
+      "name": "Kit Azeite Extravirgem Premium",
+      "description": "Kit com 3 garrafas de 500 ml de azeite extravirgem importado. Acidez máxima de 0,3%. Ideal para saladas, finalização de pratos e uso culinário gourmet.",
+      "price": 119.70,
+      "category": "Alimentos",
+      "status": "inactive",
+      "imageUrl": "https://placehold.co/400x300/ca8a04/white?text=Azeite",
+      "createdAt": "2024-04-01T13:30:00.000Z"
+    },
+    {
+      "id": "8",
+      "name": "Luminária de Mesa LED Articulada",
+      "description": "Luminária com braço articulado em 360°, 5 níveis de luminosidade, luz branca/quente/neutra, porta USB lateral para carregamento e base antiderrapante.",
+      "price": 129.90,
+      "category": "Casa",
+      "status": "active",
+      "imageUrl": "https://placehold.co/400x300/7c3aed/white?text=Luminaria",
+      "createdAt": "2024-04-18T16:45:00.000Z"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
