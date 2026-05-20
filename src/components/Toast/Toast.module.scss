@@ -1,0 +1,106 @@
+@use '@/styles/variables' as *;
+
+.container {
+  position: fixed;
+  bottom: $spacing-lg;
+  right: $spacing-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(110%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  min-width: 280px;
+  max-width: 400px;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  font-size: 0.875rem;
+  font-weight: 500;
+  pointer-events: all;
+  animation: slide-in 0.22s ease-out;
+
+  &.success {
+    background: $color-primary-light;
+    color: $color-primary-dark;
+    border-left: 3px solid $color-primary;
+  }
+
+  &.error {
+    background: #FEF2F2;
+    color: #B91C1C;
+    border-left: 3px solid #DC2626;
+  }
+
+  &.info {
+    background: #EFF6FF;
+    color: #1D4ED8;
+    border-left: 3px solid #2563EB;
+  }
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+
+  .success & {
+    background: $color-primary;
+    color: $color-white;
+  }
+
+  .error & {
+    background: #DC2626;
+    color: $color-white;
+  }
+
+  .info & {
+    background: #2563EB;
+    color: $color-white;
+  }
+}
+
+.message {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.close {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0 2px;
+  cursor: pointer;
+  opacity: 0.45;
+  color: inherit;
+  flex-shrink: 0;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 1;
+  }
+}

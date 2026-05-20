@@ -1,0 +1,88 @@
+@use '@/styles/variables' as *;
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: $spacing-lg;
+  animation: fade-in 0.15s ease;
+}
+
+.modal {
+  background: $color-white;
+  border-radius: $border-radius-lg;
+  border: 1px solid $border-color;
+  box-shadow: 0 8px 40px rgba(15, 23, 42, 0.15);
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slide-up 0.2s ease;
+
+  &.sm {
+    max-width: 400px;
+  }
+
+  &.md {
+    max-width: 540px;
+  }
+
+  &.lg {
+    max-width: 800px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-lg;
+  border-bottom: 1px solid $border-color;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $color-gray-900;
+  letter-spacing: -0.2px;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: $color-gray-400;
+  cursor: pointer;
+  padding: 2px $spacing-xs;
+  border-radius: $border-radius;
+  transition: color 0.15s, background-color 0.15s;
+
+  &:hover {
+    color: $color-gray-900;
+    background: $color-gray-100;
+  }
+}
+
+.body {
+  padding: $spacing-lg;
+}

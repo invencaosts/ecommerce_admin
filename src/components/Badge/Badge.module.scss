@@ -1,0 +1,39 @@
+@use '@/styles/variables' as *;
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px $spacing-sm;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+
+  &.success {
+    background: $color-primary-light;
+    color: $color-primary-dark;
+  }
+
+  &.danger {
+    background: #FEE2E2;
+    color: #B91C1C;
+  }
+
+  &.warning {
+    background: #FEF3C7;
+    color: #92400E;
+  }
+
+  &.info {
+    background: #DBEAFE;
+    color: #1D4ED8;
+  }
+
+  &.neutral {
+    background: $color-gray-100;
+    color: $color-gray-600;
+  }
+}

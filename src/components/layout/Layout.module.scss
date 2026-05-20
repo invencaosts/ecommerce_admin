@@ -1,0 +1,106 @@
+@use '@/styles/variables' as *;
+@use '@/styles/breakpoints' as *;
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 $spacing-xl;
+  background: $color-sidebar;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  @include mobile {
+    padding: 0 $spacing-md;
+    height: 52px;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.brandName {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: $color-white;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.brandStar {
+  width: 13px;
+  height: 13px;
+  color: $color-primary;
+  flex-shrink: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px $spacing-md;
+  border-radius: $border-radius;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.15s, background-color 0.15s;
+
+  &:hover {
+    color: $color-white;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  &.active {
+    color: $color-primary;
+    background: rgba($color-primary, 0.12);
+    font-weight: 600;
+  }
+
+  @include mobile {
+    font-size: 0.8rem;
+    padding: 6px $spacing-sm;
+  }
+}
+
+.main {
+  flex: 1;
+  padding: $spacing-xl;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @include tablet-down {
+    padding: $spacing-lg;
+  }
+
+  @include mobile {
+    padding: $spacing-md;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: $spacing-md;
+  border-top: 1px solid $border-color;
+  background: $color-white;
+  color: $color-gray-400;
+  font-size: 0.8rem;
+}
